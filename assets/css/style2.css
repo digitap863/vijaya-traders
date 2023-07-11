@@ -1,0 +1,127 @@
+.nav-head-btns {
+  gap: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-head-btns .title {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+  border-top: 1px solid #1d1d1d;
+  border-bottom: 1px solid #000;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.nav-head-btns .title:hover {
+  border-top: 2.2px solid #1d1d1d;
+  border-bottom: 2.2px solid #000;
+  border-color: #ff383f;
+  padding: 0.1rem;
+}
+
+.nav-head-btns .title i {
+  color: #ff383f;
+  font-size: 1.8rem;
+}
+
+.nav-head-btns .nav-hambgr {
+  display: none;
+  position: relative;
+  width: 38px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-head-btns .nav-hambgr {
+    display: block;
+  }
+  .nav-head-btns {
+    width: 100%;
+  }
+
+  .nav-head-btns .title {
+    font-size: 0.7rem;
+  }
+
+  .nav-head-btns .title i {
+    font-size: 1.2rem;
+  }
+}
+
+.nav-hambgr .bar,
+.nav-hambgr::after,
+.nav-hambgr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4.5px;
+  background-color: #000;
+  margin: 5px 0px;
+  transition: 0.4s;
+}
+
+.nav-hambgr.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 5.5px);
+}
+.nav-hambgr.is-active::after {
+  transform: rotate(45deg) translate(-7.2px, -6.5px);
+}
+
+.nav-hambgr.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  /* min-height: calc(100vh - 0px); */
+  min-height: 100vh;
+  margin-top: 51.2px;
+  z-index: 98;
+  background-color: #f4f4f4;
+  padding-top: 16px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  right: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  color: #000;
+  text-transform: uppercase;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mobile-nav a:hover {
+  background-color: #efeded;
+}
+.product-quick-view-content .content .title-2 {
+  color: #454545;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 479.98px) {
+  .product-quick-view-content .content .title {
+    font-size: 2rem;
+  }
+}
