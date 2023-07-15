@@ -23,7 +23,6 @@
   border-color: #ff383f;
   padding: 0.1rem;
   transition: 0.1s linear;
-
 }
 
 .nav-head-btns .title i {
@@ -227,8 +226,6 @@
   cursor: pointer;
 }
 
-
-
 @media (max-width: 1045px) {
   .wrapper-test .box {
     max-width: 48%;
@@ -246,6 +243,11 @@
   }
   .mobile-nav {
     margin-top: 38.2px;
+  }
+
+  .modal-content {
+    width: 90%;
+    height: 70%;
   }
 }
 

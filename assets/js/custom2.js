@@ -84,12 +84,17 @@ window.onload = function () {
     mobile_menu.classList.toggle("is-active");
   });
 
-  $(".nav-hambgr").on('click', function() {
+  $(".nav-hambgr").on("click", function () {
     $("body").toggleClass("fix");
-    $("#scroll-to-top").toggleClass("show");
-
+    $("#scroll-to-top").toggle("show");
   });
 
+  $(".about-nav-link").on("click", function () {
+    menu_btn.classList.toggle("is-active");
+    $(".mobile-nav").toggleClass("is-active");
+    $("body").toggleClass("fix");
+    $("#scroll-to-top").toggleClass("show");
+  });
   // end of ham
 
   // quick view button

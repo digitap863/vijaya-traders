@@ -227,7 +227,7 @@
         spaceBetween: 0,
       },
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 0,
       },
     },
