@@ -1,6 +1,7 @@
 .nav-head-btns {
   gap: 10%;
   display: flex;
+  /* justify-content: flex-end; */
   justify-content: flex-end;
 }
 
@@ -21,6 +22,8 @@
   border-bottom: 2.2px solid #000;
   border-color: #ff383f;
   padding: 0.1rem;
+  transition: 0.1s linear;
+
 }
 
 .nav-head-btns .title i {
@@ -40,6 +43,9 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .nav-head-btns {
+    justify-content: flex-end;
+  }
   .nav-head-btns .nav-hambgr {
     display: block;
   }
@@ -120,8 +126,135 @@
   font-size: 1.3rem;
 }
 
+.wrapper-test {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper-test .box .name {
+  font-weight: 600;
+}
+
+.wrapper-test .box p,
+.wrapper-test .box .stars {
+  margin: 10px 0;
+}
+
+.wrapper-test .box {
+  max-width: 32%;
+  box-shadow: 1px 1px 36px 1px rgba(0, 0, 0, 0.072) inset;
+  box-sizing: border-box;
+  /* background: #d3d3d33b; */
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.orange-fill {
+  color: #ff383f;
+}
+
+.map-wrap {
+  height: 70vh;
+  background-image: url("https://maps.googleapis.com/maps/api/staticmap?scale=1&size=1600x900&style=feature:poi.business|visibility:off&style=feature:water|visibility:simplified&style=feature:road|element:labels.icon|visibility:off&style=feature:road.highway|element:labels|saturation:-90|lightness:25&format=jpg&language=en-GB&region=IN&markers=color:0xad6ecd|9.9809252,76.3153294&zoom=16&client=google-presto&signature=EnL1VTj7PdA7gcHQq-pHdTqiV1M");
+  background-position: center center;
+}
+
+.galerie {
+  width: 100%;
+  padding-top: 2.3rem;
+  /* max-width: 1300px; */
+  margin: 5px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galerie .item {
+  width: 350px;
+  height: 350px;
+  margin: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s linear;
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+  margin: 0 auto;
+  display: block;
+  width: 40%;
+  height: 90%;
+  /* max-width: 1200px; */
+  max-width: 900px;
+}
+.close {
+  color: #f1f1f1;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 1045px) {
+  .wrapper-test .box {
+    max-width: 48%;
+    margin-bottom: 25px;
+  }
+
+  .mobile-nav {
+    margin-top: 49.2px;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper-test .box {
+    max-width: 100%;
+    /* margin-bottom: 25px; */
+  }
+  .mobile-nav {
+    margin-top: 38.2px;
+  }
+}
+
 @media only screen and (max-width: 479.98px) {
   .product-quick-view-content .content .title {
     font-size: 2rem;
+  }
+
+  .mobile-nav {
+    margin-top: 35.2px;
   }
 }

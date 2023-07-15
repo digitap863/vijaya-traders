@@ -24,7 +24,7 @@
   Typography CSS
 -----------------------------------------------------------------------
 */
-.testBorder{
+.testBorder {
   border: 2px solid rgba(255, 0, 0, 0.516);
 }
 
@@ -264,7 +264,8 @@ table p {
 /*-------- Spacing Style Css --------*/
 section .container,
 section .container-fluid {
-  padding-bottom: 90px;
+  /* padding-bottom: 90px; */
+  padding-bottom: 45px;
   padding-top: 85px;
 }
 @media only screen and (max-width: 1199px) {
@@ -408,7 +409,7 @@ section .container-fluid {
   cursor: not-allowed;
 }
 .pagination-content-wrap .pagination-nav .pagination li a.active {
-  color: #a4a4a4;
+  color: #a4a4a4; 
 }
 .pagination-content-wrap .pagination-nav .pagination li a:hover {
   color: #ff383f;
@@ -932,6 +933,7 @@ section .container-fluid {
 */
 .section-title {
   margin-bottom: 64px;
+  /* padding-left: 80px; */
 }
 @media only screen and (max-width: 991px) {
   .section-title {
@@ -966,7 +968,7 @@ section .container-fluid {
   padding: 0;
 }
 .header-area .container .row .col:nth-child(1) {
-  max-width: 185px;
+  max-width: 240px;
 }
 @media only screen and (max-width: 991px) {
   .header-area .container .row .col:nth-child(1) {
@@ -988,7 +990,8 @@ section .container-fluid {
   }
 }
 .header-area .container .row .col:nth-child(3) {
-  max-width: 258px;
+  /* max-width: 258px; */
+  max-width: 180px;
 }
 @media only screen and (max-width: 991px) {
   .header-area .container .row .col:nth-child(3) {
@@ -1038,8 +1041,6 @@ section .container-fluid {
   .header-area .header-navigation-area {
     display: none;
   }
-
-  
 }
 .header-area .header-navigation-area .main-menu.nav {
   -webkit-box-align: center;
@@ -1482,13 +1483,17 @@ section .container-fluid {
 
 .header-logo-area {
   position: relative;
-  margin: 3px;
+}
+.header-logo-area a img {
+  -webkit-box-shadow: 10px 10px 29px -17px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 10px 10px 29px -17px rgba(0, 0, 0, 0.45);
+  box-shadow: 10px 10px 29px -17px rgba(0, 0, 0, 0.45);
 }
 
 .header-action-area {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;  
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1630,7 +1635,6 @@ section .container-fluid {
   -ms-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
 }
-
 
 @media only screen and (max-width: 575px) {
   .header-action-area .header-action .user-menu .title {
@@ -2639,14 +2643,23 @@ section .container-fluid {
 .about-position-style .about-thumb .image-1 {
   width: 65%;
 }
-.about-position-style .about-thumb .image-1,
-.about-position-style .about-thumb .image-2 {
+.about-position-style .about-thumb .image-1 {
   min-height: 569px;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
+
+.about-position-style .about-thumb .image-2 {
+  min-height: 569px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* background-position: -59px center; */
+}
+
 @media only screen and (max-width: 991px) {
   .about-position-style .about-thumb .image-1,
   .about-position-style .about-thumb .image-2 {
@@ -2870,7 +2883,7 @@ section .container-fluid {
 -----------------------------------------------------------------------
 */
 .product-area.product-grid-list-area .container {
-  padding-top: 85px;
+  padding-top: 8px;
   padding-bottom: 57px;
 }
 @media only screen and (max-width: 1199px) {
@@ -5950,7 +5963,7 @@ section .container-fluid {
   width: 25px;
   height: 25px;
 }
-.product-quick-view-content .content{
+.product-quick-view-content .content {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7456,6 +7469,10 @@ section .container-fluid {
   Footer CSS
 -----------------------------------------------------------------------
 */
+.footer-only {
+  margin-left: -1.5rem;
+}
+
 .footer-area {
   padding-top: 99px;
 }

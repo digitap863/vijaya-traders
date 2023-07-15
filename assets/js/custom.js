@@ -93,17 +93,6 @@
     $(".mini-cart-dropdown").toggleClass("show").focus();
   });
 
-  // Popup Quick View JS
-  var popupProduct = $(".product-quick-view-modal");
-  $(".add-quick-view").on("click", function () {
-    popupProduct.addClass("active");
-    $("body").addClass("fix");
-  });
-  $(".btn-close, .canvas-overlay").on("click", function () {
-    popupProduct.removeClass("active");
-    $("body").removeClass("fix");
-  });
-
   // Review Form JS
   $(".review-write-btn").on("click", function () {
     $(".reviews-form-area, .review-write-btn").toggleClass("show").focus();
@@ -141,7 +130,7 @@
   var productSlider = new Swiper(".product-slider-container", {
     slidesPerGroup: 2,
     loop: true,
-    speed: 600,
+    speed: 500,
     navigation: {
       nextEl: ".product-slider-container .swiper-button-next",
       prevEl: ".product-slider-container .swiper-button-prev",
@@ -163,9 +152,10 @@
         slidesPerView: 2,
         spaceBetween: 30,
       },
+
       0: {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
     },
   });
@@ -178,11 +168,22 @@
     }
   );
 
+  // Popup Quick View JS
+  var popupProduct = $(".product-quick-view-modal");
+  $(".add-quick-view").on("click", function () {
+    popupProduct.addClass("active");
+    $("body").addClass("fix");
+  });
+  $(".btn-close, .canvas-overlay").on("click", function () {
+    popupProduct.removeClass("active");
+    $("body").removeClass("fix");
+  });
+
   // Post Slider Js
   var swiper = new Swiper(".post-slider-container", {
     slidesPerGroup: 1,
     spaceBetween: 30,
-    speed: 600,
+    speed: 900,
     navigation: {
       nextEl: ".post-slider-container .swiper-button-next",
       prevEl: ".post-slider-container .swiper-button-prev",
@@ -205,12 +206,12 @@
     autoplay: {
       delay: 4000,
     },
-    lope: true,
+    loop: true,
     slidesPerGroup: 1,
     speed: 500,
     breakpoints: {
       1200: {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 0,
       },
       992: {
